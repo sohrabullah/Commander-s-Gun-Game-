@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #000);
+}
+
+/* Dashboard - fixed at the bottom with small height and 100% width */
+.dashboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Homepage */
+#homepage {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  padding-top: 40vh;
+}
+
+#homepage h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+#play-now {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: #ff3366;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#play-now:hover {
+  background: #ff1a53;
+}
+
+/* Login Screen */
+#login-screen {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  padding-top: 40vh;
+}
+
+#login-screen h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#player-name {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ff3366;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#player-name:focus {
+  border-color: #ffd700;
+}
+
+#start-game {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff3366;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#start-game:hover {
+  background: #ff1a53;
+}
+
+/* Game Screen */
+#game-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#gun {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  width: 80px;
+  height: 30px;
+  background: #666;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+#gun-barrel {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 10px;
+  height: 20px;
+  background: #444;
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
+
+.bullet {
+  position: absolute;
+  width: 5px;
+  height: 15px;
+  background: yellow;
+  border-radius: 2px;
+  z-index: 4;
+}
+
+.falling-object {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 12px;
+  z-index: 3;
+}
+
+/* Coin */
+.coin {
+  background: #ffd700;
+  border-radius: 50%;
+}
+
+/* Heart */
+.heart {
+  background: #ff3366;
+  clip-path: polygon(50% 15%, 75% 15%, 100% 35%, 50% 85%, 0 35%, 25% 15%);
+}
+
+/* Game Over Screen */
+#game-over-screen {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  padding-top: 40vh;
+}
+
+#game-over-screen h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff3366;
+}
+
+#game-over-screen p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#restart-game {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff3366;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#restart-game:hover {
+  background: #ff1a53;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
