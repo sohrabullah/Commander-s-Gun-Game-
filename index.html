@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commander's Gun Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Home Screen -->
+    <div id="homepage">
+      <h1>Commander's Gun Game</h1>
+      <button id="play-now">Start Game</button>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="hidden">
+      <h1>Welcome to the Game</h1>
+      <div class="login-form">
+        <input type="text" id="player-name" placeholder="Enter your name">
+        <button id="start-game">Start Game</button>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="hidden">
+      <div class="dashboard">
+        <p>Player: <span id="player-name-display"></span></p>
+        <p>Score: <span id="score">0</span></p>
+        <p>Coins Missed: <span id="coins-missed">0</span></p>
+        <p>Hearts Hit: <span id="hearts-hit">0</span></p>
+        <button id="pause-game">Pause</button>
+        <button id="stop-game">Stop</button>
+      </div>
+      <div id="gun">
+        <div id="gun-barrel"></div>
+      </div>
+      <div id="bullets-container"></div>
+      <div id="falling-objects-container"></div>
+    </div>
+
+    <!-- Message System -->
+    <div id="message-system" class="hidden"></div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="hidden">
+      <h1>Game Over!</h1>
+      <p id="game-over-message"></p>
+      <p>Final Score: <span id="final-score"></span></p>
+      <button id="restart-game">Play Again</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
